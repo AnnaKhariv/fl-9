@@ -1,0 +1,168 @@
+/* Print style*/
+@media only print {
+
+    body{
+        background-color: transparent;
+    }
+
+    .container, .tm-main-content, .pad {
+        padding: 0;
+    }
+
+    .tm-sidebar, #about, section:nth-child(n+3){
+        display: none;
+    }
+
+    .tm-main-content, .margin-b-10  {
+        margin: 0;
+    }
+
+    .tm-banner {
+        height: 270px;
+        padding: 30px 0;
+    }
+
+    .flex-2-col {
+        flex-direction: column;
+    }
+
+    .tm-team-description-container{
+        max-width: 550px;
+    }
+
+    h2.tm-section-title {
+        color: #0066cd;
+    }
+
+    .tm-footer {
+        page-break-after: always;
+    }
+
+}
+
+@media only screen{
+    /*Gallery block*/
+    .thumbnail {
+        border-radius: 50%;
+    }
+
+    .box-bg:hover {
+        background-color: #30b5d9;
+        cursor: pointer;
+    }
+
+    .box-bg > h2.tm-section-title:hover {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    /*First letter in each paragraphs */
+    p:not(.text-xs-center)::first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+
+    /*Blocks shadow*/
+    .tm-sidebar, .tm-content-box {
+        box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    }
+
+    .blocks > .tm-team-description-container {
+        max-width: 100%;
+        box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    }
+
+   /*Triangle*/
+    .margin-b-10::before, section::before{
+        content: "";
+        width: 0;
+        height: 0;
+        border-right: 150px solid transparent;
+        border-top: 30px solid #76cdd7;
+        position: absolute;
+    }
+
+    /*Text alignment*/
+    .carousel-content h2.tm-section-title {
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+
+    /*Italic font style*/
+    h2 + p {
+        font-style: italic;
+    }
+
+    p:not(.tm-banner-text){
+        text-indent: 5%;
+        line-height: 1.5;
+    }
+
+    /*List styling*/
+    .heading h2{
+        color: #76cdd7;
+        text-align: center;
+    }
+
+    .heading a{
+        color: #000;
+    }
+
+    .heading a:visited {
+        color: silver;
+    }
+
+    .heading a:hover {
+        color: #76cdd7;
+        text-decoration: underline double;
+    }
+
+    .heading .text::after {
+        content: "New";
+        color: #ff0000;
+        vertical-align: super;
+        font-size: x-small;
+
+    }
+
+    /*Block styling*/
+    .gallery-container li:nth-child(odd){
+        background-color: #f1f1f1;
+    }
+
+    .gallery-container p:first-letter{
+        color: #000;
+    }
+
+    .gallery-container p{
+        text-indent: unset;
+        line-height: 1.5rem;
+    }
+
+    /*Sidebar*/
+    .tm-main-nav li:not(:last-of-type) {
+        border-bottom: 1px silver dotted;
+    }
+
+    /*Work with Us form */
+    .contact-form [name^="contact_"]{
+        color: #ff0000;
+    }
+
+   .mandatory-field::after {
+        content: "*";
+        color: #ff0000;
+       font-weight: bold;
+   }
+
+    /*Submit button*/
+    .submit-btn {
+        color: #ff0000;
+    }
+
+    .submit-btn:hover {
+        color: #fff;
+        background-color: #76cdd7;
+        border-color: #76cdd7;
+    }
+}
