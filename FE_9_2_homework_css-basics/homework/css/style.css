@@ -163,6 +163,6 @@
     .submit-btn:hover {
         color: #fff;
         background-color: #76cdd7;
-        border-color: #76cdd7;
+        border-color: transparent;
     }
 }
