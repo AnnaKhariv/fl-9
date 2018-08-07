@@ -1,0 +1,22 @@
+$baseDarkColor: #000;
+$baseLightColor: #fff;
+
+$contentBackground: #f0f0f0;
+
+$separatorColor: darken(#f0f0f0, 15%);
+
+$textPrimaryLight:  #fc582d;
+$textPrimaryDark: #617e8b;
+
+$auxiliaryLight: $baseLightColor;
+$auxiliaryDark: $textPrimaryDark;
+
+$font-weight: 500;
+$font-regular: 'montserratregular', serif;
+
+@mixin font($font-size: 16px, $color: $textPrimaryDark, $font-weight: $font-weight, $font-family: $font-regular) {
+  font-size: $font-size;
+  color: $color;
+  font-weight: $font-weight;
+  font-family: $font-family;
+}

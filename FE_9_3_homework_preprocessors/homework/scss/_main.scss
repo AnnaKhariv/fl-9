@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+:root {
+  background-color: $contentBackground;
+}
+
+.main-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  background-color: $contentBackground;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+
+  .logo {
+    max-width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid $separatorColor;
+    border-top: 1px solid $separatorColor;
+    margin-bottom: 2.5em;
+    padding: 1em;
+
+    a {
+      @include font(1.2rem, $textPrimaryLight, $font-weight, $font-regular);
+      text-decoration: none;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $separatorColor;
+      }
+    }
+  }
+}
+
+.toolbar {
+  text-align: right;
+  margin: 1.5rem 0;
+
+  input {
+    padding: 1em;
+    border: 1px solid $textPrimaryLight;
+    @include font(1em, $textPrimaryLight, $font-weight, $font-regular);
+    background-color: $contentBackground;
+
+    &::placeholder {
+      @include font(1em, $textPrimaryLight, $font-weight, $font-regular);
+    }
+  }
+}
+
+.post-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  align-items: flex-start;
+  @include font(1rem, $textPrimaryDark, $font-weight, $font-regular);
+
+  article {
+    flex: calc(50% - 2em);
+    background-color: $auxiliaryLight;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    &:nth-child(odd) {
+      margin-right: 1em;
+    }
+
+    &:nth-child(even) {
+      margin-left: 1em;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    div:last-child {
+      margin: 0.5em;
+    }
+
+    .post-description {
+      font-size: 0.8em;
+      color: $separatorColor;
+      border-bottom: 1px solid $separatorColor;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+
+    }
+
+    h3 {
+      text-transform: uppercase;
+      padding-top: 5px;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+section {
+
+  h1, h4 {
+    @include font(1.5rem, $textPrimaryLight, bold, $font-regular);
+    text-transform: uppercase;
+    text-align: right;
+    padding-top: 3em;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+}
+
+.about {
+  margin-left: 1.2rem;
+
+  p {
+    @include font(1rem, $textPrimaryDark, $font-weight, $font-regular);
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.contact-form {
+  text-align: right;
+  max-width: 100%;
+
+  [name^="contact_"] {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $auxiliaryDark;
+    @include font(1rem, $auxiliaryDark, $font-weight, $font-regular);
+    resize: vertical;
+    background-color: $contentBackground;
+
+    &::placeholder {
+      @include font(1rem, $auxiliaryDark, $font-weight, $font-regular);
+    }
+
+  }
+
+  .submit-btn {
+    margin: 1rem 0;
+    padding: 0.5rem 5rem;
+    @include font(1rem, $baseLightColor, $font-weight, $font-regular);
+    text-transform: uppercase;
+    background-color: $textPrimaryLight;
+    border-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $textPrimaryDark;
+    }
+  }
+
+}
+
+footer {
+  @include font(0.8rem, $auxiliaryDark, $font-weight, $font-regular);
+  opacity: 0.7;
+}
