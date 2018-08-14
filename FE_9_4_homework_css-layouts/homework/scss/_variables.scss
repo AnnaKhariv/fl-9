@@ -1,0 +1,31 @@
+$baseDarkColor: #000;
+$baseLightColor: #FFF;
+$textBaseLightColor: $baseLightColor;
+$textBaseDarkColor: $baseDarkColor;
+
+$contentBackgroundLight: $baseLightColor;
+$contentBackgroundDark: #F3F3F3;
+
+$textDarkColor: #343638;
+
+$hoverColor: #B7C8D9;
+
+$borderColor1: $baseLightColor;
+$borderColor2: $baseDarkColor;
+
+$inputBackgroundColor: #F0F0F0;
+$inputButtonColor: #343638;
+
+$footerTextColor: #9E9E9E;
+$timeTextColor: #E8E8E8;
+
+@mixin font($font-size: 16px, $color: $baseDarkColor, $font-weight: initial) {
+  font-size: $font-size;
+  color: $color;
+  font-weight: $font-weight;
+  font-family: "Open Sans", serif;;
+}
+
+
+
+

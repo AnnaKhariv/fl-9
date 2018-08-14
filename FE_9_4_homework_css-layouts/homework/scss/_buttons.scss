@@ -1,0 +1,45 @@
+.btn {
+  border: 2px solid $borderColor1;
+  background-color: rgba($baseDarkColor, 0.4);
+  @include font(1rem, $textBaseLightColor, initial);
+  text-transform: capitalize;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($baseDarkColor, 0.6);
+    color: $hoverColor;
+    border-color: $hoverColor;
+  }
+}
+
+.btn-input{
+  display: flex;
+  justify-content: center;
+
+  input[type="email"] {
+    width: 75%;
+    border: 1px solid $borderColor2;
+    padding: 0.8rem;
+    background-color: $inputBackgroundColor;
+
+    &::placeholder {
+      @include font(0.8rem, $textBaseDarkColor, initial);
+    }
+
+  }
+
+  input[type="submit"] {
+    width: 25%;
+    border: none;
+    background-color: $inputButtonColor;
+    color: $textBaseLightColor;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $baseDarkColor;
+      color: $hoverColor;
+      border-color: $hoverColor;
+    }
+  }
+}
