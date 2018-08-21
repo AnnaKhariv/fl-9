@@ -10,7 +10,7 @@ if (isValid(sideA) || isValid(sideB) || isValid(angle)) {
     let angleRadian = angle * Math.PI / DEGREE;
 
     let sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2) - 2 * sideA * sideB * Math.cos(angleRadian));
-    let triangleSquare = 1/2 * sideA * sideB * Math.sin(angleRadian);
+    let triangleSquare = 1 / 2 * sideA * sideB * Math.sin(angleRadian);
     let trianglePerimeter = sideA + sideB + sideC;
 
     result = `
