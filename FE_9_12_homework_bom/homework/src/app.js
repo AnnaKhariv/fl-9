@@ -1,6 +1,9 @@
 const rootNode = document.getElementById('root');
 let todoItems = [];
 const ZERO = 0;
+const ONE = 1;
+const TWO = 2;
+const THREE = 3;
 let current;
 
 window.addEventListener('load', init);
@@ -28,7 +31,7 @@ let markup = `<h1 class='retreat' id='h1'></h1><!--
              --><ul class='toDoList' id='toDoList'></ul>`;
 
 function parceHTML() {
-    document.getElementById('h1').innerText = arguments[0];
+    document.getElementById('h1').innerText = arguments[ZERO];
     const btn = document.getElementsByClassName('btn');
     const inputField = document.getElementById('inputField');
     const notification = document.getElementById('notification');
@@ -37,25 +40,25 @@ function parceHTML() {
     if (arguments[1]) {
         notification.style.display = 'none';
         inputField.style.display = 'block';
-        btn[0].style.display = 'initial';
-        btn[0].innerText = 'Cancel';
-        btn[0].addEventListener('click', function () {
+        btn[ZERO].style.display = 'initial';
+        btn[ZERO].innerText = 'Cancel';
+        btn[ZERO].addEventListener('click', function () {
             redirect();
         });
-        btn[1].setAttribute('id', 'save');
-        btn[1].innerText = arguments[2];
+        btn[ONE].setAttribute('id', 'save');
+        btn[ONE].innerText = arguments[TWO];
         toDoList.style.display = 'none';
 
     } else {
         inputField.style.display = 'none';
-        btn[0].style.display = 'none';
-        btn[1].innerText = arguments[2];
-        btn[1].addEventListener('click', function () {
+        btn[ZERO].style.display = 'none';
+        btn[ONE].innerText = arguments[TWO];
+        btn[ONE].addEventListener('click', function () {
             window.location.hash = '/add';
         });
 
-        if (todoItems.length === 0) {
-            notification.innerText = arguments[3];
+        if (todoItems.length === ZERO) {
+            notification.innerText = arguments[THREE];
 
         } else {
             toDoList.style.display = 'block';
@@ -110,7 +113,7 @@ function parceList(toDoList) {
             this.parentElement.remove();
             todoItems.splice(current, 1);
             localStorage.setItem('toDoListKey', JSON.stringify(todoItems));
-            if (todoItems.length === 0) {
+            if (todoItems.length === ZERO) {
                 localStorage.removeItem('toDoListKey');
             }
 
@@ -148,12 +151,12 @@ function checkHash(e) {
 
 function checkInput() {
     let save = document.getElementById('save');
-    save.disabled = (this.value.length > ZERO) ? false : true;
+    save.disabled = this.value.length <= ZERO;
 }
 
 function redirect() {
     localStorage.setItem('toDoListKey', JSON.stringify(todoItems));
-    window.location.href = window.location.href.split('#')[0];
+    window.location.href = window.location.href.split('#')[ZERO];
 }
 
 function addNewItem() {
