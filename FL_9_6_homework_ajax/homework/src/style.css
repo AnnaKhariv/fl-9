@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.caption i {
+    display: inline-block;
+    position: relative;
+}
+
+.caption i:before,
+.caption i:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    top: 1rem;
+    width: 100%;
+}
+
+.caption i:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.caption i:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.form-data {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.form-input {
+    margin: 0.5rem;
+    padding: 0.8rem;
+    width: 20%;
+    border-radius: 2rem;
+    color: #21739c;
+    font-weight: bold;
+}
+
+#btn {
+    background: #21739c;
+    color: #fff;
+}
+
+.animation {
+    margin: 3rem;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+}
+
+#loader, .animation-data, #error {
+    display: none;
+}
+
+#loader {
+    width: 5rem;
+    height: 5rem;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1rem solid;
+    border-radius: 50%;
+    border-top-color: #33ccff;
+    border-bottom-color: #ff99cc;
+
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.data-water {
+    background: linear-gradient(to right, #fff 10%, #21739c 50%, #fff 90%);
+    background-size: 200% auto;
+
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.data-land {
+    background: linear-gradient(to right, #fff 10%, #65b467 50%, #fff 90%);
+    background-size: 200% auto;
+
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animation-data {
+    animation: change 3s linear infinite;
+}
+
+@keyframes change {
+    to {
+        background-position: 200% center;
+    }
+}

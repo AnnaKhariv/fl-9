@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>FL 9 3 homework AJAX</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Determine if a point (latitude and longitude) is on water or land!</h1>
+  </header>
+  <main>
+    <div class="wrapper">
+      <h2 class="caption"><i>Enter you values</i></h2>
+      <div class="form-data">
+        <input type="text" name="coordinates" placeholder="Latitude" class="form-input">
+        <input type="text" name="coordinates" placeholder="Longitude" class="form-input">
+        <input type="button" value="Check" class="form-input" id="btn"/>
+      </div>
+    </div>
+    <div class="animation">
+      <div id="loader"></div>
+      <h3 class="animation-data data-water">Water</h3>
+      <h3 class="animation-data data-land">Land</h3>
+      <div id="error"></div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
