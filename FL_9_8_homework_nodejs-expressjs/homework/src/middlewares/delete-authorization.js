@@ -1,6 +1,6 @@
 const authorizationCheck = (req, res, next) => {
 
-    if (req.method === 'DELETE' && req.headers.authorization !== 'Basic Og==') {
+    if (req.method === 'DELETE' && req.headers.authorization !== 'X-Password qwerty') {
 
         return res.status(401).send('Unauthorized');
     } else {
@@ -11,4 +11,3 @@ const authorizationCheck = (req, res, next) => {
 
 module.exports = authorizationCheck;
 
-//X-Password qwerty
