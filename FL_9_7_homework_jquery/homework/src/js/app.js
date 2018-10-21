@@ -56,3 +56,10 @@ function addContent() {
     }
 
 }
+
+$('.gallery-grid').on('click', function (event) {
+    let $target = $(event.target);
+    $target.toggleClass('popup');
+    $target.removeClass('count');
+});
+
