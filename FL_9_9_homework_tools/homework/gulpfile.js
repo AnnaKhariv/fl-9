@@ -61,7 +61,7 @@ gulp.task('style:build', function () {
 });
 
 gulp.task('js:build', function () {
-    gulp.src(['node_modules/moment/moment.js', 'dist/js/clock.js', 'dist/js/canvasState.js', 'dist/js/app.js'])
+    gulp.src(['node_modules/moment/moment.js', 'dist/js/canvasState.js', 'dist/js/clock.js', 'dist/js/app.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('app.min.js'))
         .pipe(uglify())
