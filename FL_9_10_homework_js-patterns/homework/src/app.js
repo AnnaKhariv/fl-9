@@ -27,7 +27,7 @@ class Store {
     }
 
     buyPizzaSlice() {
-        console.log(`Price after discount is ${this.cost()} and you have ${this.bonus()} bonuses`);
+        return `Price after discount is ${this.cost()} and you have ${this.bonus()} bonuses`;
     }
 
     cost() {
@@ -62,4 +62,4 @@ let store = new Store(100, 5, 15, 0);
 getDiscount(store);
 setBonus(store);
 
-store.buyPizzaSlice();
+console.log(store.buyPizzaSlice());
