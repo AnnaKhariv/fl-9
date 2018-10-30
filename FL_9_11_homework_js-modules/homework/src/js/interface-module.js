@@ -47,7 +47,7 @@ function calculate(operands) {
     let showResult = document.getElementsByClassName('result')[0];
 
     let numbers = operands.split(/[*/+-]/g);
-    let signs = operands.split(/[0-9]/g);
+    let signs = operands[1];
 
     showResult.value = result(+numbers[0],  +numbers[1], signs[0]);
 }
