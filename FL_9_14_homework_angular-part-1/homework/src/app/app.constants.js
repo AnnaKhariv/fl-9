@@ -53,7 +53,7 @@ app.service('wallPostsService', function () {
             'Praesent euismod sed nunc at dignissim. Donec nec feugiat elit.',
             likeCount: 2,
             liked: true,
-            src: 'src/assets/img/1.jpg'
+            src: 'assets/img/1.jpg'
         },
         {
             id: 1,
@@ -67,7 +67,7 @@ app.service('wallPostsService', function () {
             'Praesent euismod sed nunc at dignissim. Donec nec feugiat elit.',
             likeCount: 2,
             liked: false,
-            src: 'src/assets/img/2.jpg'
+            src: 'assets/img/2.jpg'
         },
         {
             id: 2,
@@ -81,7 +81,7 @@ app.service('wallPostsService', function () {
             'Praesent euismod sed nunc at dignissim. Donec nec feugiat elit.',
             likeCount: 2,
             liked: false,
-            src: 'src/assets/img/3.jpg'
+            src: 'assets/img/3.jpg'
         }
     ];
 
