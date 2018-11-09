@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blog {
+    background-color: #fafafa;
+    font: 16px Arial;
+    color: #333333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    padding: 1rem;
+}
+
+.search {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.post {
+    width: 100%;
+    background-color: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.authorData {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.avatar {
+    width: 7%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 0.7rem;
+}
+
+.message {
+    margin: 0.8rem 0;
+}
+
+.heart {
+    border: 1px solid #c4c4c4;
+    background-color: #c4c4c4;
+    color: #fff;
+    padding: 0.3rem;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.liked {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.activity {
+    display: inline-block;
+}
+
+.btn {
+    color: #3179bb;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border: 1px solid #3179bb;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    color: #c4c4c4;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.input::placeholder {
+    color: #333333;
+}

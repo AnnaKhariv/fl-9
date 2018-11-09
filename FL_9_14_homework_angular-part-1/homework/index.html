@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FL_9_14_homework_angular-part-1</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./src/assets/css/style.css"/>
+</head>
+<body class="blog">
+<div class="container" ng-app="app">
+    <h1 class="title">POSTS WALL</h1>
+    <input class="search" type="search" placeholder="Search by title..." ng-model="searchByTitle"/>
+    <div ng-controller="DataController">
+        <div class="post" data-ng-repeat="post in posts | filter: searchByTitle | orderBy: 'id'">
+            <div ng-hide="editPost">
+                <div class="authorData">
+                    <img class="avatar" ng-src="{{post.src}}"/>
+                    {{post.author}}
+                </div>
+                <h3>{{post.title}}</h3>
+                <p class="message">{{post.message}}</p>
+                <div ng-click="activity(post.id)" class="activity">
+                    <span class="heart" ng-class="post.liked ? 'liked' : null">&#10084;</span>
+                    {{post.likeCount}}
+                </div>
+                <button ng-show="post.author == '{{currentUser.author}}'" ng-click="editPost = !editPost"
+                    class="btn">
+                    Edit
+                </button>
+            </div>
+
+            <div class="post" ng-show="editPost">
+                <div class="authorData">
+                    <img class="avatar" ng-src="{{post.src}}"/>
+                    {{post.author}}
+                </div>
+                <input type="text" class="input" ng-model="post.title"/>
+                <textarea class="input" ng-model="post.message"></textarea>
+                <div ng-click="activity(post.id)" class="activity">
+                    <span ng-model="post.liked" class="heart" ng-class="post.liked ? 'liked' : null">&#10084;</span>
+                    <span ng-model="post.likeCount">{{post.likeCount}}</span>
+                </div>
+                <button type="button" ng-disabled="!post.title || !post.message"
+                    ng-click="edit(post.id); editPost = !editPost" class="btn">
+                    Save
+                </button>
+                <button type="button" ng-click="editPost = !editPost" class="btn">Cancel</button>
+            </div>
+        </div>
+
+        <button ng-click="newPost = !newPost" class="btn" ng-hide="newPost">Add new post</button>
+        <div class="post" ng-show="newPost">
+            <div class="authorData">
+                <img class="avatar" ng-src="{{currentUser.src}}"/>
+                {{currentUser.author}}
+            </div>
+            <input type="text" class="input" ng-model="addPost.title"/>
+            <textarea class="input" ng-model="addPost.message"></textarea>
+            <button type="button" ng-disabled="!addPost.title || !addPost.message"
+                    ng-click="insertPost(); newPost = !newPost" class="btn">Save
+            </button>
+            <button type="button" ng-click="newPost = !newPost" class="btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="./src/app/angular.min.js"></script>
+<script src="./src/app/app.module.js"></script>
+<script src="./src/app/app.controller.js"></script>
+<script src="./src/app/app.constants.js"></script>
+</body>
+</html>
